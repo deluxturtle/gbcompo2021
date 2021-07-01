@@ -1,9 +1,17 @@
 #include <gb/gb.h>
 
-const uint16_t kerbin_r = 600;//thousand kilometers in radius
-const uint8_t gravity = 10;//roughly close to 9.8 lol
+//1,000 Km = 1 Mm
+const uint16_t kerbin_r = 600;//Mm radius of kerbin
+const uint8_t gravity = 10;//roughly close to 9.8 haha
 
-
+struct ship{
+    //meters per second
+    //just use this to count to 1,000
+    uint16_t mspeed;
+    //kilometers per second...Gets updated every 1,000 meters. 
+    //fastest ship went 150 km/s
+    uint8_t kspeed;
+};
 
 void main(){
     // remaps the palette
@@ -17,9 +25,15 @@ void main(){
     // 3	Black
     //           3 1 0 transparent
     OBP0_REG = 0b11010000;
+
+    struct ship player;
+    player.mspeed = 200;//speed of ksp orbit ships.
+    player.kspeed = 2;
+    //now speed is 2,200 m/s
+
     SHOW_SPRITES;
     while(1){
-        //lets get a value from 0 to 1
+        
 
         wait_vbl_done();
     }
