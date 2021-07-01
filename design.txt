@@ -1,0 +1,13 @@
+KSP DEMAKE lol this doesn't sound hard at all <.<
+
+Setup
+    Planet map view
+
+First goal
+    1 planet orbit sim
+
+Second goal 
+    Crashing into atmosphere
+
+Third goal
+    Launching into orbit
