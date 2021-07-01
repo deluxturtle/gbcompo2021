@@ -1,5 +1,9 @@
 #include <gb/gb.h>
 
+const uint16_t kerbin_r = 600;//thousand kilometers in radius
+const uint8_t gravity = 10;//roughly close to 9.8 lol
+
+
 
 void main(){
     // remaps the palette
@@ -15,6 +19,8 @@ void main(){
     OBP0_REG = 0b11010000;
     SHOW_SPRITES;
     while(1){
+        //lets get a value from 0 to 1
+
         wait_vbl_done();
     }
 }
