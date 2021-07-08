@@ -1,0 +1,13 @@
+img2gb tileset \
+    --output-c-file=tileset.c \
+    --output-header-file=tileset.h \
+    --output-image=tileset.png \
+    --deduplicate \
+    kerbinmockup.png
+
+img2gb tilemap \
+    --output-c-file=tilemap.c \
+    --output-header-file=tilemap.h \
+    tileset.png \
+    kerbinmockup.png
+

@@ -4,7 +4,8 @@ Game jam for https://itch.io/jam/gbcompo21
 # Tools
 Raspberry pi 400 (I like the extra challenge)  
 GBDK 2020  
-Emulicious  
+Emulicious
+tilemap-studio  
 VSCode  
 
 

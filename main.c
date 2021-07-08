@@ -1,5 +1,8 @@
 #include <gb/gb.h>
-
+#include "orbit.h"
+#include "planet.h"
+#include "tilemap.h"
+#include "tileset.h"
 
 
 struct Ship{
@@ -11,12 +14,6 @@ struct Ship{
     uint8_t kspeed;
     //##.## two decimal places
     uint8_t mass;//tons
-};
-
-struct Planet{
-    uint8_t gravity;
-    //1,000 Km = 1 Mm
-    uint16_t radius;//Mm radius
 };
 
 struct Ship player;
@@ -41,8 +38,12 @@ void main(){
     //now speed is 2,200 m/s
 
     kerbin.gravity = 10;
-    kerbin.radius = 600;
+    kerbin.radius = 19;
 
+    set_bkg_data(0, TILESET_TILE_COUNT, TILESET);
+    set_bkg_tiles(0,0, TILEMAP_WIDTH, TILEMAP_HEIGHT, TILEMAP);
+    
+    SHOW_BKG;
     SHOW_SPRITES;
     while(1){
         
@@ -50,3 +51,17 @@ void main(){
         wait_vbl_done();
     }
 }
+//orbit stuff
+    //E (energy) = -GM/(r_a+r_p)
+    //L(angular momentum) = sqrt(2GM * r_a *r_p / (r_a+r_p))
+    //semi major axis
+    //= (r_a+r_p)/2 
+    //eccentricity is (r_a-r_p)/(r_a+r_p)
+    // S = -GM/e
+    // P = -L^2/(2E)
+    // r_a+r_p=S
+    // r_a*r_p=P
+
+    //r_a=(S+/-Sqrt(s^2-4P))/2
+    //r_a=(S+Sqrt(s^2-4P))/2
+    //r_p=(S-Sqrt(s^2-4P))/2
