@@ -6,7 +6,7 @@ typedef struct Planet{
 
     uint8_t radius;// km/16
     uint8_t atmosphere;// km/16
-    uint8_t gravity = 10;
+    uint8_t gravity;
 }Planet;
 
 #endif

@@ -1,6 +1,7 @@
 #include <gb/gb.h>
 #include "orbit.h"
 #include "planet.h"
+//test mockup
 #include "tilemap.h"
 #include "tileset.h"
 
@@ -31,7 +32,7 @@ void main(){
     // 3	Black
     //           3 1 0 transparent
     OBP0_REG = 0b11010000;
-
+    
     player.mass = 1;//1 ton? = 907kg?
     player.mspeed = 200;//speed of ksp orbit ships.
     player.kspeed = 2;
@@ -40,11 +41,11 @@ void main(){
     kerbin.gravity = 10;
     kerbin.radius = 19;
 
+    SHOW_BKG;
     set_bkg_data(0, TILESET_TILE_COUNT, TILESET);
     set_bkg_tiles(0,0, TILEMAP_WIDTH, TILEMAP_HEIGHT, TILEMAP);
     
-    SHOW_BKG;
-    SHOW_SPRITES;
+    //SHOW_SPRITES;
     while(1){
         
 

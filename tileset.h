@@ -4,7 +4,7 @@
 #define _TILESET_H
 
 extern const UINT8 TILESET[];
-#define TILESET_TILE_COUNT 45
+#define TILESET_TILE_COUNT 46
 
 
 #endif
