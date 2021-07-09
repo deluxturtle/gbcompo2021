@@ -31,7 +31,7 @@ void main(){
     // 2	Dark gray
     // 3	Black
     //           3 1 0 transparent
-    OBP0_REG = 0b11010000;
+    //OBP0_REG = 0b11010000;
     
     player.mass = 1;//1 ton? = 907kg?
     player.mspeed = 200;//speed of ksp orbit ships.
