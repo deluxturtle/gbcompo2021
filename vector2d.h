@@ -7,11 +7,11 @@ typedef struct Vector2d8{
     uint8_t y;
 }Vector2d8;
 
-// //16 bit =values (int)
-// typedef struct Vector2d16{
-//     uint16_t x;
-//     uint16_t y;
-// }Vector2d16;
+//16 bit =values (int)
+typedef struct Vector2d16{
+    uint16_t x;
+    uint16_t y;
+}Vector2d16;
 
 // //32bit valuse (long)
 // typedef struct Vector2d32{

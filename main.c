@@ -4,6 +4,7 @@
 //test mockup
 #include "tilemap.h"
 #include "tileset.h"
+#include "ellipse.h"
 
 
 struct Ship{
@@ -13,7 +14,6 @@ struct Ship{
     //kilometers per second...Gets updated every 1,000 meters. 
     //fastest irl craft went 150 km/s
     uint8_t kspeed;
-    //##.## two decimal places
     uint8_t mass;//tons
 };
 
@@ -46,6 +46,11 @@ void main(){
     set_bkg_tiles(0,0, TILEMAP_WIDTH, TILEMAP_HEIGHT, TILEMAP);
     
     //SHOW_SPRITES;
+    struct Ellipse ellipse;
+    ellipse.segments = 8;
+    ellipse.xAxis = 5;
+    ellipse.yAxis = 3;
+    CalculateEllipse(&ellipse);
     while(1){
         
 
