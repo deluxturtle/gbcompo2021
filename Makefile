@@ -6,7 +6,7 @@
 # to match your GBDK root directory (ex: GBDK_HOME = "C:/GBDK/"
 GBDK_HOME = "/opt/gbdk/"
 
-LCC = $(GBDK_HOME)bin/lcc
+LCC = $(GBDK_HOME)bin/lcc -debug -y
 PNG2MTSPR = $(GBDK_HOME)bin/png2mtspr
 
 # You can uncomment the line below to turn on debug output

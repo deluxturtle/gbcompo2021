@@ -2,7 +2,6 @@
 #define ELLIPSE_H
 
 #include <gb/gb.h>
-#include "sinlup.h"
 #include "vector2d.h"
 
 struct Ellipse {

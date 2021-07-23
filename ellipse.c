@@ -7,10 +7,10 @@ void CalculateEllipse(struct Ellipse *ellipse){
     uint8_t i;
     for(i = 0; i < 8; i++){
         uint8_t angle = (i*30);
-        uint8_t x = sinlup[angle] * ellipse->xAxis;
-        uint8_t y = sinlup[255-angle] * ellipse->yAxis;
-        points[i].x = x;
-        points[i].y = y;
+        // uint8_t x = sinlup[angle] * ellipse->xAxis;
+        // uint8_t y = sinlup[255-angle] * ellipse->yAxis;
+        // points[i].x = x;
+        // points[i].y = y;
     }
     points[8] = points[0];
     

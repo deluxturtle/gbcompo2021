@@ -5,6 +5,7 @@
 #include "tilemap.h"
 #include "tileset.h"
 #include "ellipse.h"
+#include "math.h"
 
 
 struct Ship{
@@ -19,6 +20,8 @@ struct Ship{
 
 struct Ship player;
 struct Planet kerbin;
+uint8_t *result;
+
 
 void main(){
     // remaps the palette
@@ -51,6 +54,9 @@ void main(){
     ellipse.xAxis = 5;
     ellipse.yAxis = 3;
     CalculateEllipse(&ellipse);
+
+    divide(25, 5, result);
+
     while(1){
         
 
