@@ -1,4 +1,5 @@
 #include <gb/gb.h>
+#include <stdlib.h>
 #include "orbit.h"
 #include "planet.h"
 //test mockup
@@ -50,12 +51,15 @@ void main(){
     
     //SHOW_SPRITES;
     struct Ellipse ellipse;
-    ellipse.segments = 8;
+    ellipse.pos.x = 55;
+    ellipse.pos.y = 55;
+    ellipse.seg_count = 8;
     ellipse.xAxis = 5;
     ellipse.yAxis = 3;
+    ellipse.points = (Vector2d8*)malloc(sizeof(Vector2d8)*ellipse.seg_count);
     CalculateEllipse(&ellipse);
 
-    divide(25, 5, result);
+    
 
     while(1){
         

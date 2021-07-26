@@ -6,7 +6,8 @@
 #include "math.h"
 
 struct Ellipse {
-    uint8_t segments;//how many sprites to show ellipse
+    Vector2d8 pos;
+    uint8_t seg_count;//how many sprites to show ellipse
     Vector2d8 *points;
     uint8_t xAxis;
     uint8_t yAxis;
