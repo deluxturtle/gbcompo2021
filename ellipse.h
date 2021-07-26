@@ -3,6 +3,7 @@
 
 #include <gb/gb.h>
 #include "vector2d.h"
+#include "math.h"
 
 struct Ellipse {
     uint8_t segments;//how many sprites to show ellipse

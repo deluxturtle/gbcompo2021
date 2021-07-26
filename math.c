@@ -64,16 +64,29 @@ void getangle_fromxy(uint8_t adjacent, uint8_t opposite, uint8_t *result){
 }
 
 void getvector_from_degrees(uint16_t *degrees, Vector2d8 *result){
-    if(*degrees <= 45){
-        result->x = vector_from_angle_table[*degrees][0];
-        result->y = vector_from_angle_table[*degrees][1];    
-    }
-    else if(*degrees <=90){
-        result->x = vector_from_angle_table[*degrees][1];
-        result->y = vector_from_angle_table[*degrees][0];
-    }
-    //TODO HERE
 
-    
+    if(*degrees <= 90){
+        if(*degrees <= 45){
+            result->x = vector_from_angle_table[*degrees][0];
+            result->y = vector_from_angle_table[*degrees][1];    
+        }
+        else{
+            tempvalue = *degrees-45;
+            result->x = vector_from_angle_table[tempvalue][1];
+            result->y = vector_from_angle_table[tempvalue][0];
+        }
+    }
+    else if(*degrees <= 180){
+        if(*degrees <= 135){
+            tempvalue = 90-*degrees;
+            result->x = vector_from_angle_table[tempvalue][1];
+            result->y = vector_from_angle_table[tempvalue][0];
+        }
+        else{
+            tempvalue = 180-*degrees;
+            result->x = vector_from_angle_table[tempvalue][0];
+            result->y = vector_from_angle_table[tempvalue][1];    
+        }
+    }
 }
 

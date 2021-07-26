@@ -48,3 +48,14 @@ const uint8_t vector_from_angle_table[2][45] = {
     {183, 177},
     {180, 180}
 };
+
+void add_vector2d8(Vector2d8 *a, Vector2d8 *b){
+    a->x+=b->x;
+    a->y+=b->y;
+}
+
+void add_vector2d16(Vector2d16 *a, Vector2d8 *b){
+    a->x+=b->x;
+    a->y+=b->y;
+}
+
