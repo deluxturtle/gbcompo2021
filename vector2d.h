@@ -19,9 +19,9 @@ typedef struct Vector2d16{
 //     uint32_t y;
 // }Vector2d32;
 
-//from degrees 0 to 45 this returns a vector from the unit circle where 1 = 255;
+//from degrees 0 to 45 this returns a vector from the unit circle where 1 = 127;
 //values are [x,y]
-const extern uint8_t vector_from_angle_table[2][45];
+const extern int8_t vector_from_angle_table[2][45];
 
 //a+b (value saved in a)
 void add_vector2d8(Vector2d8 *a, Vector2d8 *b);

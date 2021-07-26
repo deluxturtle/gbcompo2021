@@ -63,7 +63,7 @@ void getangle_fromxy(uint8_t adjacent, uint8_t opposite, uint8_t *result){
     *result = *divide_result;
 }
 
-void getvector_from_degrees(uint16_t *degrees, Vector2d8 *result){
+void getvector_from_degrees(uint16_t *degrees, Vector2d16 *result){
 
     if(*degrees <= 90){
         if(*degrees <= 45){
