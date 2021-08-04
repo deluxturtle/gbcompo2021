@@ -9,6 +9,14 @@
 #include "math.h"
 
 
+const unsigned char circle_data[] = {
+
+	//  circle.png 1 x 1 tiles 
+
+	0x24,0xc3,0x7e,0x81,0xff,0x00,0x7f,0x00,0x7f,0x00,0xff,0x00,0x7e,0x81,0x3c,0xc3
+};
+
+
 struct Ship{
     //meters per second
     //just use this to count to 1,000
@@ -48,21 +56,26 @@ void main(){
     SHOW_BKG;
     set_bkg_data(0, TILESET_TILE_COUNT, TILESET);
     set_bkg_tiles(0,0, TILEMAP_WIDTH, TILEMAP_HEIGHT, TILEMAP);
+    set_sprite_data(0, 1, circle_data);
+    set_sprite_tile(5, 0);
     
-    //SHOW_SPRITES;
+    SHOW_SPRITES;
     struct Ellipse ellipse;
     ellipse.pos.x = 55;
     ellipse.pos.y = 55;
     ellipse.seg_count = 8;
     ellipse.xAxis = 5;
     ellipse.yAxis = 3;
-    ellipse.points = (Vector2d8*)malloc(sizeof(Vector2d8)*ellipse.seg_count);
+    ellipse.displayIndex = 0;
     CalculateEllipse(&ellipse);
 
     
 
     while(1){
-        
+        if (sys_time % 3 == 0)
+        {
+            
+        }
 
         wait_vbl_done();
     }
