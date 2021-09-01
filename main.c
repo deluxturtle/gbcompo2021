@@ -64,8 +64,8 @@ void main(){
     ellipse.pos.x = 55;
     ellipse.pos.y = 55;
     ellipse.seg_count = 8;
-    ellipse.xAxis = 5;
-    ellipse.yAxis = 3;
+    ellipse.xAxis = 10;
+    ellipse.yAxis = 10;
     ellipse.displayIndex = 0;
     CalculateEllipse(&ellipse);
 
