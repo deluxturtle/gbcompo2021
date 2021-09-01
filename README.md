@@ -1,4 +1,5 @@
-# gbcompo2021
+# KSP GAMEBOY DEMAKE
+Originaly started for gbcompo21 jam but got sidetracked / scope of project was too big
 Game jam for https://itch.io/jam/gbcompo21
 
 # Tools
