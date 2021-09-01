@@ -20,4 +20,6 @@ struct Ellipse {
 
 void CalculateEllipse(struct Ellipse *ellipse);
 
+void ShowNextEllipsePoint(struct Ellipse *ellipse);
+
 #endif

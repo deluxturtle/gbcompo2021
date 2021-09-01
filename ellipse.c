@@ -33,10 +33,12 @@ void CalculateEllipse(struct Ellipse *ellipse){
 
 }
 
-void ShowEllipse(struct Ellipse *ellipse){
+void ShowNextEllipsePoint(struct Ellipse *ellipse){
     move_sprite(0, ellipse->points[ellipse->displayIndex].x, ellipse->points[ellipse->displayIndex].y);
     ellipse->displayIndex++;
-    //if(ellipse->displayIndex)
+    if(ellipse->displayIndex > 3){
+        ellipse->displayIndex = 0;
+    }
 }
 
 

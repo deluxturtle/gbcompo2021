@@ -74,7 +74,7 @@ void main(){
     while(1){
         if (sys_time % 3 == 0)
         {
-            
+            ShowNextEllipsePoint(&ellipse);
         }
 
         wait_vbl_done();
