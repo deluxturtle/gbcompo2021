@@ -7,6 +7,7 @@
 #include "tileset.h"
 #include "ellipse.h"
 #include "math.h"
+#include "music.h"
 
 
 const unsigned char circle_data[] = {
@@ -31,6 +32,9 @@ struct Ship player;
 struct Planet kerbin;
 uint8_t *result;
 
+UBYTE joypad_state;
+
+
 
 void main(){
     // remaps the palette
@@ -44,6 +48,8 @@ void main(){
     // 3	Black
     //           3 1 0 transparent
     //OBP0_REG = 0b11010000;
+
+    initsound();
     
     player.mass = 1;//1 ton? = 907kg?
     player.mspeed = 200;//speed of ksp orbit ships.
@@ -68,15 +74,22 @@ void main(){
     ellipse.yAxis = 10;
     ellipse.displayIndex = 0;
     CalculateEllipse(&ellipse);
+   
 
-    
 
     while(1){
+        joypad_state = joypad();
+
+        if(joypad_state & J_DOWN){
+            playtestsound();
+        }
+
+        //update animations
         if (sys_time % 3 == 0)
         {
             ShowNextEllipsePoint(&ellipse);
         }
-
+        
         wait_vbl_done();
     }
 }
