@@ -33,7 +33,8 @@ struct Planet kerbin;
 uint8_t *result;
 
 UBYTE joypad_state;
-
+const uint8_t updateFrame = 3;
+uint8_t frameCounter = 1;
 
 
 void main(){
@@ -85,10 +86,16 @@ void main(){
         }
 
         //update animations
-        if (sys_time % 3 == 0)
-        {
+        if(frameCounter < updateFrame){
+            frameCounter++;
+        }
+        else{
+            frameCounter = 1;
             ShowNextEllipsePoint(&ellipse);
         }
+        // if(sys_time % updateFrame == 0){
+        //     ShowNextEllipsePoint(&ellipse);
+        // }
         
         wait_vbl_done();
     }
